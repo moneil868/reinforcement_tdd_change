@@ -14,15 +14,36 @@ class Changer
          value == PENNIES
          result << value
     elsif value > QUARTERS
-       while value > 0
-         result << QUARTERS
-         value -= QUARTERS
+       until value == 0
+         case
+         when value >= QUARTERS
+           result << QUARTERS
+           value -= QUARTERS
+         when value >= DIMES
+           result << DIMES
+           value -= DIMES
+         when value >= NICKLES
+           result << NICKLES
+           value -= NICKLES
+         when value >= PENNIES
+           result << PENNIES
+           value -= PENNIES
+         end
+         value
        end
      elsif value > DIMES
        while value > 0
          result << DIMES
          value -= DIMES
        end
+     elsif value > NICKLES
+       result << NICKLES
+       value -= NICKLES
+       until value == PENNIES
+         result << PENNIES
+         value -= PENNIES
+       end
+       result << PENNIES
     end
     result
   end

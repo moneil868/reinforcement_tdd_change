@@ -25,12 +25,10 @@ class TestChanger < MiniTest::Test
   end
 
   def test_change_small_complex_amount
-    skip
     assert_equal [5, 1, 1], Changer.make_change(7)
   end
 
   def test_change_large_complex_amount
-    skip
     assert_equal [25, 25, 10, 5, 1, 1, 1], Changer.make_change(68)
   end
 end
