@@ -18,6 +18,11 @@ class Changer
          result << QUARTERS
          value -= QUARTERS
        end
+     elsif value > DIMES
+       while value > 0
+         result << DIMES
+         value -= DIMES
+       end
     end
     result
   end
