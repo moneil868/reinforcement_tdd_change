@@ -13,17 +13,14 @@ class TestChanger < MiniTest::Test
   end
 
   def test_change_multiple_quarters
-    skip
     assert_equal [25, 25], Changer.make_change(50)
   end
 
   def test_change_one_dime
-    skip
     assert_equal [10], Changer.make_change(10)
   end
 
   def test_change_mutiple_dimes
-    skip
     assert_equal [10, 10], Changer.make_change(20)
   end
 
