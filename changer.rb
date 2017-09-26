@@ -1,3 +1,7 @@
-def make_change
+class Changer
+
+
+  def self.make_change(value)
+  end
 
 end
